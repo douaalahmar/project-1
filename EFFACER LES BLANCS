@@ -1,4 +1,4 @@
-# project-1 //EFFACER LES LANCS PAR DUPLICATION D'UNE CHAINE//
+//EFFACER LES LANCS PAR DUPLICATION D'UNE CHAINE//
 ===========================================================================================================================
 #include <stdio.h>
 #include <string.h>
