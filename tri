@@ -1,0 +1,71 @@
+//LES 3 TYPES DU TRI //
+========================================================================================================================
+#include<stdio.h>
+void main (){
+     int n ;
+     t[20];
+     i,j,min,max;
+     //taille du tableau//
+     do
+     {
+              printf("donner la taille n du tableau;\n");
+              scanf("%d",&n);
+              }
+     while(!( N <= 20));
+     //Remplissage du tableau//
+     printf("- Remplir le Tableau :\n");
+
+     for( i = 0 ; i < N ; i++ )
+     {
+        printf("- T1[%d] = ", i);
+        scanf("%d", &T1[i]);
+     }
+     //Tri selection//
+     for( i = 0 ; i < N-1 ; i++)
+    {
+        min = i;
+        for( j = i+1 ; j < N ; j++)
+        {
+            if( T[j] <= T[min] ){ min = j};
+        }
+        if( min != i)
+        {
+            T[i] = T[i] + T[min];
+            T[min] = T[i] - T[min];
+            T[i] = T[i] - T[min];
+        }
+    }
+    //Tri Insertion//
+    for(i = 0 ; i < N-1 ; i++)
+    {
+        min = T[i];
+        j = i;
+        while(j > 0 && T[j - 1] > min)
+        {
+            T[j] = T[j - 1];
+            j--;
+        }
+        T[j] = min;
+    }
+    //Tri a bulles//
+    test = 0;
+    while(!test)
+    {
+        test = 1;
+        for(i = 0 ; i < N-1 ; i++)
+        {
+            if(T[i] > T[i+1])
+            {
+                T[i] = T[i] + T[i + 1];
+                T[i + 1] = T[i] - T[i + 1];
+                T[i] = T[i] - T[i + 1];
+                test = 0;
+            }
+        }
+    }
+    //Affichage du tableau trie//
+    printf(" Les elements de T trie :\t");
+
+    for( i = 0 ; i < N ; i++) {printf("%d\t", T[i])};       
+}
+=======================================================================================================================
